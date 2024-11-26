@@ -1,0 +1,118 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #faf8ef;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+  color: #776e65;
+}
+
+.score-container {
+  background: #bbada0;
+  padding: 10px 20px;
+  border-radius: 3px;
+  color: white;
+  text-align: center;
+}
+
+.score-label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.score {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  background: #bbada0;
+  padding: 10px;
+  border-radius: 6px;
+  width: 400px;
+  height: 400px;
+}
+
+.tile {
+  background: #cdc1b4;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #776e65;
+  transition: all 0.15s ease-in-out;
+  aspect-ratio: 1;
+}
+
+.tile-2 { background: #eee4da; }
+.tile-4 { background: #ede0c8; }
+.tile-8 { background: #f2b179; color: white; }
+.tile-16 { background: #f59563; color: white; }
+.tile-32 { background: #f67c5f; color: white; }
+.tile-64 { background: #f65e3b; color: white; }
+.tile-128 { 
+  background: #edcf72; 
+  color: white;
+  font-size: 28px;
+}
+.tile-256 { 
+  background: #edcc61; 
+  color: white;
+  font-size: 28px;
+}
+.tile-512 { 
+  background: #edc850; 
+  color: white;
+  font-size: 28px;
+}
+.tile-1024 { 
+  background: #edc53f; 
+  color: white;
+  font-size: 24px;
+}
+.tile-2048 { 
+  background: #edc22e; 
+  color: white;
+  font-size: 24px;
+}
+
+.game-over {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(238, 228, 218, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: #776e65;
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
